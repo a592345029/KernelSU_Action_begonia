@@ -40,8 +40,8 @@ jobs:
     - name: Download Clang Toolchain
       run: |
         mkdir clang
-        wget https://github.com/ZyCromerZ/Clang/releases/download/18.0.0-20230824-release/Clang-18.0.0-20230824.tar.gz
-        tar -C clang/ -zxf Clang-18.0.0-20230824.tar.gz
+        wget -q "https://github.com/Mandi-Sa/clang/releases/download/amd64-kernel-arm-20230205/amd64-kernel-arm-20230205.7z" -O clang.7z
+        7za x clang.7z
 
     - name: Download mkbootimg tools
       if: env.MAKE_BOOT_IMAGE == 'true'
